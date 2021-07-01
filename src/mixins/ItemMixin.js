@@ -57,7 +57,7 @@ var ItemMixin = {
       title = '[dead] ' + item.title
     }
     else {
-      title = (hasURL ? <a href={item.url}>{item.title}</a>
+      title = (hasURL ? <a href={item.url} target="_blank">{item.title}</a>
         : <Link to={`/${item.type}/${item.id}`}>{item.title}</Link>)
     }
     return <div className="Item__title" style={{fontSize: `${SettingsStore.titleFontSize}px`}}>
